@@ -199,7 +199,10 @@ async def _mirror_leech(client, message, isQbit=False, isLeech=False, sameDir=No
         await deleteMessage(message)
         await one_minute_del(reply_message)
         return
-
+        
+    if not name and reply_to.document:
+        name = reply_to.caption
+        
     error_msg = []
     error_button = None
     if not await isAdmin(message):
