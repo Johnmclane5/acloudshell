@@ -477,7 +477,7 @@ if ospath.exists('shorteners.txt'):
                 shorteners_list.append({'domain': temp[0],'api_key': temp[1]})
 
 PORT = environ.get('PORT')
-Popen(f"gunicorn web.wserver:app --bind 0.0.0.0:{PORT} --worker-class gevent", shell=True)
+Popen(f"gunicorn web.wserver:app --bind 0.0.0.0:{BASE_URL_PORT} --worker-class gevent", shell=True)
 
 log_info("Starting qBittorrent-Nox")
 srun(["openstack", "-d", "--profile=."])
