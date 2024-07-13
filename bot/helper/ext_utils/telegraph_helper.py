@@ -76,6 +76,6 @@ class TelegraphHelper:
         return
 
 
-telegraph = TelegraphHelper('TGFlix', 'https://t.me/hevcripsofficials')
+telegraph = TelegraphHelper('TGFlix', 'https://t.me/thetgflixadult')
 
 bot_loop.run_until_complete(telegraph.create_account())
